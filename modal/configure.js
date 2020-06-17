@@ -1,12 +1,13 @@
 
 class Modal {
 
-  static configure(button){
-    var modal = document.getElementById("myModal");
+  static configure(){
+    var btn = document.getElementById("buy-button");
+    var modal = document.getElementById("product-modal");
     var span = document.getElementsByClassName("close")[0];
   
     // When the user clicks the button, open the modal 
-    button.onclick = function () {
+    btn.onclick = function () {
       modal.style.display = "block";
     }
   
@@ -23,7 +24,7 @@ class Modal {
     }
   }
   
-  static  load(button){
+  static  load(){
     // create a new div element 
     var contentDiv = document.createElement("div"); 
     contentDiv.id = "content"
@@ -36,7 +37,7 @@ class Modal {
         document.querySelector('#content').innerHTML = data;
   
         // Get elements
-        Modal.configure(button)
+        Modal.configure()
   
       });
   }

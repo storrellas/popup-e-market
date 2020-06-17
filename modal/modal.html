@@ -1,6 +1,6 @@
 
 <link rel="stylesheet" href="/modal/modal.css">
-<div id="myModal" class="modal">
+<div id="product-modal" class="modal">
 
   <div class="modal-content">
     <div class="modal-header">
@@ -11,7 +11,7 @@
     </div>
   </div>
 </div>
-<!-- <style>
+<style>
   .shadow {
     background: transparent;
     -webkit-box-shadow: 5px 10px 18px #888888;  
@@ -28,9 +28,36 @@
     left: 50%; 
     transform: translateX(-50%);
   }
+  .buy-button-container{
+    flex-grow: 1; 
+    text-align: right;
+    margin-right: 40px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .buy-button {
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #5cb85c;
+    padding: 20px;
+    border-radius: 20px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+  }
+  .buy-button:hover {
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+  }
 </style>
-<div class="shadow banner" style="display: flex; padding: 10px">
+<div class="shadow banner" style="display: flex; align-items: center; padding: 10px">
   <img src='/modal/bracelet_small.jpg' style="margin-left: 20px; height:100%"></img>
-  <div>200$</div>
-  <p><button id="myBtn">Add to Cart</button></p>
-</div> -->
+  <h1 style="margin-left: 20px">Only for 200$</h1>
+  <p class="buy-button-container">    
+    <a id="buy-button" class="buy-button" href="#"  rel="nofollow noopener">Buy!</a>
+  </p>
+</div>
