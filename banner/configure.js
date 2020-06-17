@@ -59,15 +59,24 @@ class Modal {
   };
 
   static configure(){
-    var btn = document.getElementById("buy-button");
+    var buy_button = document.getElementById("buy-button");
+    var dismiss_button = document.getElementById("dismiss-button");
     var modal = document.getElementById("product-modal");
     var span = document.getElementsByClassName("close")[0];
   
     // When the user clicks the button, open the modal 
-    btn.onclick = function () {
+    buy_button.onclick = function () {
       modal.style.display = "block";
     }
   
+    dismiss_button.onclick = function () {
+      // Get the content
+      var content = document.getElementById("content");
+
+      // Toggle the content
+      Modal.fadeOut(content);
+    }
+
     // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
       modal.style.display = "none";
@@ -88,7 +97,7 @@ class Modal {
     contentDiv.classList.add('toggle-content');
     document.body.appendChild(contentDiv); 
   
-    fetch('/modal/modal.html')
+    fetch('/banner/banner.html')
       .then(response => response.text())
       .then(data => {
         // Add content modal

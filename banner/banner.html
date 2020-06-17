@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" href="/modal/modal.css">
+<link rel="stylesheet" href="/banner/banner.css">
 <div id="product-modal" class="modal">
 
   <div class="modal-content">
@@ -55,6 +55,25 @@
     transition: all 0.4s ease 0s;
   }
 
+  .dismiss-button {
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #4299e1;
+    padding: 20px;
+    border-radius: 20px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+  }
+  .dismiss-button:hover {
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+  }
+  
+  
   .toggle-content {
     display: none;
     height: 0;
@@ -70,9 +89,10 @@
   }
 </style>
 <div class="shadow banner" style="display: flex; align-items: center; padding: 10px">
-  <img src='/modal/bracelet_small.jpg' style="margin-left: 20px; height:100%"></img>
+  <img src='/banner/bracelet_small.jpg' style="margin-left: 20px; height:100%"></img>
   <h1 style="margin-left: 20px">Only for 200$</h1>
-  <p class="buy-button-container">    
+  <p class="buy-button-container">
+    <a id="dismiss-button" class="dismiss-button" href="#"  rel="nofollow noopener">Dismiss</a>
     <a id="buy-button" class="buy-button" href="#"  rel="nofollow noopener">Buy!</a>
   </p>
 </div>
